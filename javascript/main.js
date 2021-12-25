@@ -71,6 +71,8 @@ String.prototype.split2 = function(char) {
 }
 
 updateAmount();
+orderUpdate();
+updateAmountinCart();
 
 function amountControl(para, symbol) {
     var parent = para.parentElement;
@@ -129,8 +131,6 @@ function updateAmountinCart() {
 
     amountOfItem.innerHTML = amountInCart();
 }
-
-updateAmountinCart();
 
 function deleteItem_CartIndex(index) {
     while(index.tagName != "LI")
@@ -201,5 +201,3 @@ function orderUpdate() {
         index.innerHTML = start++;
     }
 }
-
-orderUpdate();
