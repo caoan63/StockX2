@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <script src="https://kit.fontawesome.com/05a9bb444c.js" crossorigin="anonymous"></script>  
+    <script src="./javascript/main.js" defer></script>
     <title>Phi Đội Bay Official | Cung Cấp Linh Kiện  Máy Tính Cao Cấp</title>
 </head>
 <body>
@@ -134,7 +135,6 @@
                             </div>
                         </li> -->
                     </ul>
-    
                 </nav>
 
                 <!-- Header width search -->
@@ -196,9 +196,6 @@
                             <span class="header__search-cart-number">3</span>
                             <!-- header__search-cart--none -->
                             <div class="header__search-cart ">
-                                <img src="./assets/img/cart/empty-cart.png" alt="" class="header__search-cart--none-img">
-                                <span class="header__search-cart--none-msg">Chưa có sản phẩm nào</span>
-
                                 <h3 class="header__search-cart-title">Sản phẩm trong giỏ hàng</h3>
                                 <ul class="header__search-cart-list">
                                     <li class="header__search-cart-item">
@@ -210,7 +207,7 @@
                                             </div>
                                             <div class="header__search-cart-item-body">
                                                 <span class="header__search-cart-item-description">Phân loại: Bạc</span>
-                                                <span class="header__search-cart-item-remove">Xoá</span>
+                                                <span class="header__search-cart-item-remove" onclick="deleteItem_CartIndex(this)">Xoá</span>
                                             </div>
                                         </div>
                                     </li>
@@ -223,7 +220,7 @@
                                             </div>
                                             <div class="header__search-cart-item-body">
                                                 <span class="header__search-cart-item-description">Phân loại: Bạc</span>
-                                                <span class="header__search-cart-item-remove">Xoá</span>
+                                                <span class="header__search-cart-item-remove" onclick="deleteItem_CartIndex(this)">Xoá</span>
                                             </div>
                                         </div>
                                     </li>
@@ -236,12 +233,12 @@
                                             </div>
                                             <div class="header__search-cart-item-body">
                                                 <span class="header__search-cart-item-description">Phân loại: Bạc</span>
-                                                <span class="header__search-cart-item-remove">Xoá</span>
+                                                <span class="header__search-cart-item-remove" onclick="deleteItem_CartIndex(this)">Xoá</span>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="btn btn--primary header__search-cart-btn">Xem giỏ hàng</div>
+                                <a href="cartlist.html" class="btn btn--primary header__search-cart-btn">Xem giỏ hàng</a>
                             </div>
                             
                         </div>
@@ -330,9 +327,9 @@
                             <span class="item__filter-label">Sắp xếp theo</span>
                            
                             <div class="item__filter-buttons">
-                                <button class="item__filter-btn btn ">Phổ biến</button>
-                                <button class="item__filter-btn btn btn--primary">Mới nhất</button>
-                                <button class="item__filter-btn btn btn--primary">Bán chạy</button>
+                                <button class="item__filter-btn btn " onclick="active(this)">Phổ biến</button>
+                                <button class="item__filter-btn btn btn--primary" onclick="active(this)">Mới nhất</button>
+                                <button class="item__filter-btn btn btn--primary" onclick="active(this)">Bán chạy</button>
                                 
                                 <div class="item__filter-input">
                                     <span class="item__filter-input-label">Giá</span>
@@ -340,11 +337,11 @@
                                         <i class="fas fa-angle-down"></i>
                                     </span>
                                     <ul class="item__filter-input-list">
-                                        <li class="item__filter-input-selection">
+                                        <li class="item__filter-input-selection" onclick="activeList(this)">
                                             Giá: Tăng dần
                                             <i class="fas fa-check"></i>
                                         </li>
-                                        <li class="item__filter-input-selection">
+                                        <li class="item__filter-input-selection" onclick="activeList(this)">
                                             Giá: Giảm dần
                                             <i class="fas fa-check"></i>
                                         </li>
@@ -401,7 +398,7 @@
                         <div class="item__product">
                             <div class="row sm-gutter">
                                 <div class="col l-2-4 m-4 c-6">
-                                    <a class="item__product-item" href="#">
+                                    <a class="item__product-item" href="./item.html">
                                         <div class="item__product-item-img" style=" background-image: url(https://product.hstatic.net/200000019918/product/i9-9900k-1_aa5acbf5b3cb4535acc5f015674df6ea_67d9fe235da84b5894332b50c781b9bc.jpg);"></div>
                                         <h4 class="item__product-item-name">CPU Intel Core i9-9900K (3.6 Upto 5.0GHz)</h4>
                                         <div class="item__product-item-price">
@@ -441,8 +438,8 @@
                                 </div>
 
                                 <div class="col l-2-4 m-4 c-6">
-                                    <a class="item__product-item" href="#">
-                                        <div class="item__product-item-img" style=" background-image: url(https://xuepc.vn/wp-content/uploads/2021/01/vga-gigabyte-aorus-master-rtx-3060ti-8G.png);"></div>
+                                    <a class="item__product-item" href="./item2.html">
+                                        <div class="item__product-item-img" style=" background-image: url(https://anphat.com.vn/media/product/35604_gv_n306tgaming_oc_8gd_candb.png);"></div>
                                         <h4 class="item__product-item-name">GIGABYTE AORUS RTX 3060 Ti MASTER 8GB (8GB GDDR6 256-bit HDMI + DP)</h4>
                                         <div class="item__product-item-price">
                                             <span class="item__product-item-price-old">22.300.000đ</span>
@@ -481,7 +478,7 @@
                                 </div>
 
                                 <div class="col l-2-4 m-4 c-6">
-                                    <a class="item__product-item" href="#">
+                                    <a class="item__product-item" href="./item3.html">
                                         <div class="item__product-item-img" style=" background-image: url(https://hanoicomputercdn.com/media/product/47009_corsair_vengeance_pro_rgb.jpg);"></div>
                                         <h4 class="item__product-item-name">RAM Desktop CORSAIR Vengeance PRO RGB CMW32GX4M2D3000C16 3000MHz</h4>
                                         <div class="item__product-item-price">
@@ -521,7 +518,7 @@
                                 </div>
 
                                 <div class="col l-2-4 m-4 c-6">
-                                    <a class="item__product-item" href="#">
+                                    <a class="item__product-item" href="./item4.html">
                                         <div class="item__product-item-img" style=" background-image: url(https://www.bhphotovideo.com/images/images500x500/asus_rog_maximus_xiii_hero_1613036774_1620109.jpg);"></div>
                                         <h4 class="item__product-item-name">ASUS ROG MAXIMUS XIII HERO ATX LGA 1200 Gaming</h4>
                                         <div class="item__product-item-price">
@@ -561,9 +558,9 @@
                                 </div>
 
                                 <div class="col l-2-4 m-4 c-6">
-                                    <a class="item__product-item" href="#">
+                                    <a class="item__product-item" href="./item5.html">
                                         <div class="item__product-item-img" style=" background-image: url(https://hanoicomputercdn.com/media/product/55693_37028_nguon_corsair_rm_series_rm1000i_1000w_modular_80_plus_gold_0005_6.jpg);"></div>
-                                        <h4 class="item__product-item-name"> Corsair RM Series RM1000i 1000W (80 Plus Gold Modular/Black)</h4>
+                                        <h4 class="item__product-item-name">Corsair RM Series RM1000i 1000W (80 Plus Gold Modular/Black)</h4>
                                         <div class="item__product-item-price">
                                             <span class="item__product-item-price-old">5.499.000đ</span>
                                             <span class="item__product-item-price-current">4.999.000đ</span>
@@ -1439,7 +1436,7 @@
                     </div>
                 </div> <!-- Body of shop end -->
             </div> <!-- Grid end -->
-        </div>
+        </div><!-- App container end -->
 
         <footer class="footer">
                 <div class="grid wide">
@@ -1569,9 +1566,7 @@
                         <p class="footer__copyright">@2021 - Bản quyền thuộc về công ty TNHH PhiDoiBay</p>
                     </div>
                 </div>
-        </footer>
-    </div> <!-- App container end -->
-
+        </footer> 
 
         <!-- Register -->
         <div class="modal register-status">
@@ -1585,21 +1580,15 @@
                                 <span class="auth-form__switch-btn">Đăng nhập</span>
                             </div>
     
-                            <div class="auth-form__form">
-                                <div class="autho-form__group">
-                                    <input type="text" name="" id="" class="auth-form__input" placeholder="Số điện thoại">
+                            <form class="auth-form__form">
+                                <input type="tel" name="fphone" class="auth-form__input" placeholder="Số điện thoại" required>
+                                <input type="email" name="fmail" class="auth-form__input" placeholder="Email" required>
+                                <div class="auth-form__controls">
+                                    <button class="auth-form__btn btn auth-form__btn-return" type="button">Trở lại</button>
+                                    <button class="auth-form__btn btn btn--primary" type="submit">Đăng ký</button>
                                 </div>
-
-                                <div class="autho-form__group">
-                                    <input type="email" name="" id="" class="auth-form__input" placeholder="Email">
-                                </div>
-                            </div>
-    
-                            <div class="auth-form__controls">
-                                <button class="btn auth-form__control--back">Trở lại</button>
-                                <button class="btn btn--primary">Đăng ký</button>
-                            </div>
-    
+                            </form>
+                            
                             <div class="line--full">
                                 <div class="line"></div>
                                 <span class="autho-form__or">Hoặc</span>
@@ -1646,20 +1635,14 @@
                                 <span class="auth-form__switch-btn">Đăng ký</span>
                             </div>
     
-                            <div class="auth-form__form">
-                                <div class="autho-form__group">
-                                    <input type="text" name="" id="" class="auth-form__input" placeholder="Email/Số điện thoại/Tên đăng nhập">
+                            <form class="auth-form__form">
+                                <input type="text" name="fusername" class="auth-form__input" placeholder="Số điện thoại/Email/Tên tài khoản" required>
+                                <input type="password" name="fpassword" class="auth-form__input" placeholder="Mật khẩu" required>
+                                <div class="auth-form__controls">
+                                    <button class="auth-form__btn btn auth-form__btn-return" type="button">Trở lại</button>
+                                    <button class="auth-form__btn btn btn--primary" type="submit">Đăng nhập</button>
                                 </div>
-    
-                                <div class="autho-form__group">
-                                    <input type="password" name="" id="" class="auth-form__input" placeholder="Mật khẩu">
-                                </div>
-                            </div>
-    
-                            <div class="auth-form__controls">
-                                <button class="btn auth-form__control--back">Trở lại</button>
-                                <button class="btn btn--primary">Đăng nhập</button>
-                            </div>
+                            </form>
     
                             <div class="auth-form__passforget">
                                 <a href="" class="auth-form__passforget-link">Quên mật khẩu</a>
@@ -1686,102 +1669,12 @@
                                     Apple
                                 </a>
                             </div>
-                            
-                           
+
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
-
-    </div>
-
-    <script>
-        const modals = document.querySelectorAll('.modal');
-        const LoginBtns = document.querySelectorAll('.js-header__navbar-item');
-        const overlays = document.querySelectorAll('.js-modal__overlay');
-        const hideBtns = document.querySelectorAll('.auth-form__control--back');
-        const selections = document.querySelectorAll('.header__search-select-option');
-        const items = document.querySelectorAll('.header__search-cart-item');
-        const filter_item_btns = document.querySelectorAll('.item__filter-btn');
-        const filter_inputs = document.querySelectorAll('.item__filter-input-selection');
-        const like_btns = document.querySelectorAll('.item__product-item-action_like');
-
-        for(const LoginBtn of LoginBtns) {
-            LoginBtn.addEventListener('click',function(){
-                if(LoginBtn.classList.contains('signup-btn')) {
-                    for(const modal of modals) {
-                        if(modal.classList.contains('register-status')){
-                            modal.classList.add('open');
-                        }
-                    }
-                }
-                if(LoginBtn.classList.contains('signin-btn')) {
-                    for(const modal of modals) {
-                        if(modal.classList.contains('login-status')) {
-                            modal.classList.add('open');
-                        }
-                    }
-                }
-            })
-        }
-            
-        for(const hideBtn of hideBtns) {
-            hideBtn.addEventListener('click',function() {
-                for(const modal of modals) {
-                        modal.classList.remove('open');
-                }
-            })
-        }
-
-        for(const overlay of overlays) {
-            overlay.addEventListener('click',function() {
-                for(const modal of modals) {
-                        modal.classList.remove('open');
-                }
-            })
-        }
-        
-
-        for( const selection of selections ){
-            selection.addEventListener('click',function(){
-                if(selection.classList.contains('header__search-select-option--active'))
-                    this.classList.remove('header__search-select-option--active');
-                else
-                    this.classList.add('header__search-select-option--active'); 
-            })
-        }
-    
-        for( const filter_item_btn of filter_item_btns ){
-            filter_item_btn.addEventListener('click',function(){
-                if(filter_item_btn.classList.contains('btn--primary'))
-                    this.classList.remove('btn--primary');
-                else
-                    this.classList.add('btn--primary'); 
-            })
-        }
-
-        for( const filter_input of filter_inputs ){
-            filter_input.addEventListener('click',function(){
-                if(filter_input.classList.contains('selection--checked'))
-                    this.classList.remove('selection--checked');
-                else
-                    this.classList.add('selection--checked'); 
-            })
-        }
-
-        for(const like_btn of like_btns){
-            like_btn.addEventListener('click',function(){
-                if(like_btn.classList.contains('item__product-item-action_like--liked'))
-                    this.classList.remove('item__product-item-action_like--liked');
-                else
-                    this.classList.add('item__product-item-action_like--liked'); 
-            })
-        }
-        
-        
-
-    </script>
 </body>
 </html>

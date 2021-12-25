@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/cartlist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/img/logo/stockx-vector-logo.svg">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <script src="https://kit.fontawesome.com/05a9bb444c.js" crossorigin="anonymous"></script>
+    <script src="./javascript/main.js" defer></script>
+    <title>Phi Đội Bay Official | Cung Cấp Linh Kiện  Máy Tính Cao Cấp</title>
+</head>
+<body>
+    <div class="app">
+        <header class="cart-header">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-table primary-background">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--seperate">
+                            <a href="" class="header__navbar-item-link">Kênh Người Bán</a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--seperate">
+                            <a href="" class="header__navbar-item-link">Trở thành Người bán StockX</a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--qr header__navbar-item--seperate">
+                            Tải ứng dụng
+                            <!-- QR CODE -->
+                            <div class="header__qr">
+                                <img src="./assets/img/qrcode.png" alt="qrcode" class="header__qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="" class="header__qr-link"><img src="./assets/img/apple.png" alt="apple" class="header__qr-download-img"></a>
+                                    <a href="" class="header__qr-link"><img src="./assets/img/chplay.png" alt="chplay" class="header__qr-download-img"></a>
+                                    <a href="" class="header__qr-link"><img src="./assets/img/appgalery.png" alt="appgalery" class="header__qr-download-img"></a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="header__navbar-item unpointer">
+                            <span class="">Kết nối</span>
+                            <a href="https://facebook.com/quocan.6302/" target="window" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/quocan.6302/" target="window" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a href="#" class="header__navbar-item-link"><i class="header__navbar-icon far fa-bell"></i>Thông báo</a>
+                            
+                            <!-- Notify -->
+                            
+                            <div class="header__notify">
+                                <headeer class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                    <ul class="header__notify-list">
+                                        <li class="header__notify-item header__notify-item--seen">
+                                            <a href="" class="header__notify-item-link">
+                                                <img src="./assets/img/product/tv1.jpg" alt="" class="header__notify-item-img">
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-name">Smart Tivi LED SAMSUNG 32 Inch UA32T4500OT</span>
+                                                    <span class="header__notify-desc">Đã xác nhận thành công đơn hàng của bạn.</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-item-link">
+                                                <img src="./assets/img/product/tv1.jpg" alt="" class="header__notify-item-img">
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-name">Smart Tivi LED SAMSUNG 32 Inch UA32T4500OT</span>
+                                                    <span class="header__notify-desc">Đã xác nhận thành công đơn hàng của bạn.</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-item-link">
+                                                <img src="./assets/img/product/tv1.jpg" alt="" class="header__notify-item-img">
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-name">Smart Tivi LED SAMSUNG 32 Inch UA32T4500OT</span>
+                                                    <span class="header__notify-desc">Đã xác nhận thành công đơn hàng của bạn.</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <footer class="header__notify-footer">
+                                        <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                                    </footer>
+                                </headeer>
+                            </div>
+                        </li>
+
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link"><i class="header__navbar-icon far fa-question-circle"></i></a>
+                            Hỗ trợ</li>
+
+                        <!-- Login status -->
+                        <li class="header__navbar-item js-header__navbar-item signup-btn header__navbar-item--seperate">
+                            <a href="#" class="header__navbar-item-link ">Đăng ký</a>
+                        </li>
+
+                        <li class="header__navbar-item signin-btn js-header__navbar-item">
+                            <a href="#" class="header__navbar-item-link">Đăng nhập</a>
+                        </li>
+
+                        <!-- <li class="header__navbar-item">
+                            <div class="header__navbar-item-user">
+                                <img src="./assets/img/profile/avatar.jpg" alt="" class="header__navbar-item-user-img">
+                                <span class="header__navbar-item-user-name">
+                                    Cao Quốc Ân
+                                </span>
+
+                                <ul class="header__navbar-user-menu">
+                                    <li class="header__user-item">
+                                        <a href="" class="header__user-item-link">Tài Khoản Của Tôi</a>
+                                    </li>
+                                    <li class="header__user-item">
+                                        <a href="" class="header__user-item-link">Đơn Mua</a>
+                                    </li>
+                                    <li class="header__user-item">
+                                        <a href="" class="header__user-item-link">Lịch Sử</a>
+                                    </li>
+                                    <li class="header__user-item header__user-item--last">
+                                        <a href="" class="header__user-item-link">Đăng Xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> -->
+                    </ul>
+                </nav>
+            </div>
+            <div class="cartList__header">
+                <div class="grid wide">
+                    <a href="./index.html" class="cartList__header-link">
+                        Trang Chủ
+                    </a>
+                    <span class="cartList__header-title">
+                        Giỏ hàng
+                        <i class="cartList__header-icon fas fa-shopping-cart"></i>
+                        </span>
+                </div>
+            </div>
+        </header>
+
+        <div id="cartList-body" class="app__container">
+            <div class="grid wide">
+                <div class="cartList-body__item-wrapper">
+                    <div class="cartList-body__item heading-item">
+                        <table>
+                            <tr>
+                                <th>
+                                    <span class="table-heading__title">Số thứ tự</span>
+                                </th>
+                                <th>
+                                    <span class="table-heading__title">Sản phẩm</span>
+                                </th>
+                                <th>
+                                    <span class="table-heading__title">Đơn giá</span>
+                                </th>
+                                <th>
+                                    <span class="table-heading__title">Số lượng</span>
+                                </th>
+                                <th>
+                                    <span class="table-heading__title">Số tiền</span>
+                                </th>
+                                <th>
+                                    <span class="table-heading__title">Hành động</span>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="cartList-body__item cartList-body--wrapper">
+                        <table>
+                            <tr>
+                                <th>
+                                    <span class="table-row__item-order">1</span>
+                                </th>
+                                <td>
+                                    <img src="./assets/img/product/tv1.jpg" alt="" class="table-row__item-img">
+                                    <div>
+                                        <span class="table-row__item-name">TV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹp</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="table-heading__title current-price money-type">13.999.000</span>
+                                </td>
+                                <td>
+                                    <span class="amount-control">
+                                        <button onclick="amountControl(this,'-')" class="amount-control-btn amount-control__down">-</button>
+                                        <input type="number" name="quantity" id="amount-control__value" class="amount-control__input" value="1">
+                                        <button onclick="amountControl(this,'+')" class="amount-control-btn amount-control__up">+</button>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="table-heading__title total-price money-type">13.999.000</span>
+                                </td>
+                                <td>
+                                    <button class="table-btn--delete" onclick="deleteItem(this)">Xoá</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span class="table-row__item-order">1</span>
+                                </th>
+                                <td>
+                                    <img src="./assets/img/product/tv1.jpg" alt="" class="table-row__item-img">
+                                    <div>
+                                        <span class="table-row__item-name">TV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹp</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="table-heading__title current-price money-type">13.999.000</span>
+                                </td>
+                                <td>
+                                    <span class="amount-control">
+                                        <button onclick="amountControl(this,'-')" class="amount-control-btn amount-control__down">-</button>
+                                        <input type="number" name="quantity" id="amount-control__value" class="amount-control__input" value="1">
+                                        <button onclick="amountControl(this,'+')" class="amount-control-btn amount-control__up">+</button>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="table-heading__title total-price money-type">13.999.000</span>
+                                </td>
+                                <td>
+                                    <button class="table-btn--delete" onclick="deleteItem(this)">Xoá</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span class="table-row__item-order">1</span>
+                                </th>
+                                <td>
+                                    <img src="./assets/img/product/tv1.jpg" alt="" class="table-row__item-img">
+                                    <div>
+                                        <span class="table-row__item-name">TV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹp</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="table-heading__title current-price money-type">13.999.000</span>
+                                </td>
+                                <td>
+                                    <span class="amount-control">
+                                        <button onclick="amountControl(this,'-')" class="amount-control-btn amount-control__down">-</button>
+                                        <input type="number" name="quantity" id="amount-control__value" class="amount-control__input" value="1">
+                                        <button onclick="amountControl(this,'+')" class="amount-control-btn amount-control__up">+</button>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="table-heading__title total-price money-type">13.999.000</span>
+                                </td>
+                                <td>    
+                                    <button class="table-btn--delete" onclick="deleteItem(this)">Xoá</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span class="table-row__item-order">1</span>
+                                </th>
+                                <td>
+                                    <img src="./assets/img/product/tv1.jpg" alt="" class="table-row__item-img">
+                                    <div>
+                                        <span class="table-row__item-name">TV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹpTV siêu mỏng và đẹp</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="table-heading__title current-price money-type">13.999.000</span>
+                                </td>
+                                <td>
+                                    <span class="amount-control">
+                                        <button onclick="amountControl(this,'-')" class="amount-control-btn amount-control__down">-</button>
+                                        <input type="number" name="quantity" id="amount-control__value" class="amount-control__input" value="1">
+                                        <button onclick="amountControl(this,'+')" class="amount-control-btn amount-control__up">+</button>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="table-heading__title total-price money-type">13.999.000</span>
+                                </td>
+                                <td>
+                                    <button class="table-btn--delete" onclick="deleteItem(this)">Xoá</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="cartList-body__item cartList-body__calculateTotal">
+                        <div>
+                            <span class="discount-title">Mã giảm giá: </span>
+                            <input type="text" class="total-discount" name="discount" placeholder="Nhập mã giảm giá">
+                            <button class="btn discount-btn">Áp dụng</button>
+                        </div>
+                        <div>
+                            <span class="calculateTotal-title">Số lượng sản phẩm:<span class="totalAmount" id="totalAmount">0</span> </span>
+                            <span class="calculateTotal-title">Giá:<span class="totalPrice money-type" id="totalPrice">0</span> </span>
+                            <button class="btn btn--primary">Thanh toán</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="grid wide">
+                <div class="row footer__content">
+                    <div class="col l-2-4 m-4 c-12">
+                        <h3 class="footer__heading">Chăm Sóc Khách Hàng</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Trung Tâm Trợ Giúp</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">StockX Blog</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">StockX Mall</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Hướng Dẫn Mua Hàng</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Hướng Dẫn Bán Hàng</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Thanh Toán</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">StockX Xu</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Vận Chuyển</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Trả Hàng & Hoàn Tiền</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Chăm Sóc Khách Hàng</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Chính Sách Bảo Hành</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="col l-2-4 m-4 c-12">
+                        <h3 class="footer__heading">Về StockX</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Giới Thiệu Về StockX Việt Nam</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Tuyển Dụng</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Điều Khoản StockX</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Chính Sách Bảo Mật</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Chính Hãng</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Kênh Người Bán</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Flash Sales</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Chương Trình Tiếp Thị Liên Kết StockX</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Liên Hệ Với Truyền Thông</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="col l-2-4 m-4 c-12">
+                        <h3 class="footer__heading">Thanh Toán</h3>
+                        <div class="footer__payment">
+                            <img src="https://www.investo.vn/wp-content/uploads/2021/05/visa-1.png.webp" alt="Visa" class="footer__item-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard-logo" class="footer__item-img">
+                            <img src="data:image/jpeg;base64,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" alt="JCB" class="footer__item-img">
+                            <img src="https://vietwebgroup.vn/admin/uploads/ship-cod-la-gi-loi-ich-cua-hinh-thuc-nay.png" alt="cod" class="footer__item-img">
+                            <img src="https://seeklogo.com/images/S/Shopee-pay-logo-2217CDC100-seeklogo.com.png" alt="StockX-pay-logo-2217CDC100-seeklogo" class="footer__item-img">
+                        </div>
+                        <h3 class="footer__heading">Đơn vị vận Chuyển</h3>
+                        <div class="footer__payment">
+                            <img src="data:image/png;base64,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" alt="Visa" class="footer__item-img">
+                            <img src="https://images.glints.com/unsafe/glints-dashboard.s3.amazonaws.com/company-logo/c2250cc040b40d8f2f599cc407305efb.jpg" alt="giaohangtietkiem" class="footer__item-img">
+                            <img src="https://donhang.ghn.vn/static/media/Giao_Hang_Nhanh_Toan_Quoc_color.b7d18fe5.png" alt="ghnexpress" class="footer__item-img">
+                            <img src="https://viettelpost.com.vn/wp-content/uploads/2019/11/logo-380x270.jpg" alt="viettelpost" class="footer__item-img">
+                        </div>
+                    </div>
+    
+                    <div class="col l-2-4 m-4 c-12">
+                        <h3 class="footer__heading">Theo Dõi Chúng Tôi Trên</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <i class="footer__item-icon fab fa-facebook"></i>
+                                <a href="" class="footer__item-link">Facebook</a>
+                            </li>
+                            <li class="footer__item">
+                                <i class="footer__item-icon fab fa-instagram-square"></i>
+                                <a href="" class="footer__item-link">Instagram</a>
+                            </li>
+                            <li class="footer__item">
+                                <i class="footer__item-icon fab fa-linkedin"></i>
+                                <a href="" class="footer__item-link">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="col l-2-4 m-4 c-12">
+                        <h3 class="footer__heading">Tải Ứng Dụng StockX Ngay Thôi</h3>
+                        <a href="" class="footer__download-link">
+                            <img src="./assets/img/qrcode.png" alt="" class="footer__download-img">
+                            <div class="footer__download-link-wrapper">
+                                <img src="./assets/img/apple.png" alt="" class="footer__download-app-img">
+                                <img src="./assets/img/chplay.png" alt="" class="footer__download-app-img">
+                                <img src="./assets/img/appgalery.png" alt="" class="footer__download-app-img">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="row mt-8">
+                    <p class="footer__copyright">@2021 - Bản quyền thuộc về công ty TNHH PhiDoiBay</p>
+                </div>
+            </div>
+        </footer> 
+
+        <!-- Register -->
+        <div class="modal register-status">
+            <div class="modal__overlay js-modal__overlay"></div>
+            <div class="modal__body">
+                    
+                    <div class="auth-form">
+                        <div class="auth-form__container">
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__deading">Đăng ký</h3>
+                                <span class="auth-form__switch-btn">Đăng nhập</span>
+                            </div>
+    
+                            <form class="auth-form__form">
+                                <input type="tel" name="fphone" class="auth-form__input" placeholder="Số điện thoại" required>
+                                <input type="email" name="fmail" class="auth-form__input" placeholder="Email" required>
+                                <div class="auth-form__controls">
+                                    <button class="auth-form__btn btn auth-form__btn-return" type="button">Trở lại</button>
+                                    <button class="auth-form__btn btn btn--primary" type="submit">Đăng ký</button>
+                                </div>
+                            </form>
+    
+                            <div class="line--full">
+                                <div class="line"></div>
+                                <span class="autho-form__or">Hoặc</span>
+                                <div class="line"></div>
+                            </div>
+    
+                            <div class="auth-form__socials">
+                                <a href="" class="btn btn--link">
+                                    <i class="fab socials-icon fa-facebook"></i>
+                                    Facebook
+                                </a>
+                                <a href="" class="btn btn--link">
+                                    <i class="fab socials-icon fa-google"></i>
+                                    Google
+                                </a>
+                                <a href="" class="btn btn--link">
+                                    <i class="fab socials-icon fa-apple"></i>
+                                    Apple
+                                </a>
+                            </div>
+                            
+                            <div class="auth-form__licence-form">
+                                <p class="auth-form__licence-text">
+                                    Bằng việc đăng kí, bạn đã đồng ý với StockX về
+                                    <a href="" class="auth-form__licence-link">Điều khoản dịch vụ</a>
+                                    &
+                                    <a href="" class="auth-form__licence-link">Chính sách bảo mật</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>  
+
+        <!-- Login -->
+        <div class="modal login-status">
+            <div class="modal__overlay js-modal__overlay"></div>
+            <div class="modal__body">
+                    <div class="auth-form">
+                        <div class="auth-form__container">
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__deading">Đăng nhập</h3>
+                                <span class="auth-form__switch-btn">Đăng ký</span>
+                            </div>
+    
+                            <form class="auth-form__form">
+                                <input type="tel" name="fphone" class="auth-form__input" placeholder="Số điện thoại" required>
+                                <input type="email" name="fmail" class="auth-form__input" placeholder="Email" required>
+                                <div class="auth-form__controls">
+                                    <button class="auth-form__btn btn auth-form__btn-return" type="button">Trở lại</button>
+                                    <button class="auth-form__btn btn btn--primary" type="submit">Đăng ký</button>
+                                </div>
+                            </form>
+    
+                            <div class="auth-form__passforget">
+                                <a href="" class="auth-form__passforget-link">Quên mật khẩu</a>
+                                <a href="" class="auth-form__passforget-link">Cần trợ giúp?</a>
+                            </div>
+
+                            <div class="line--full">
+                                <div class="line"></div>
+                                <span class="autho-form__or">Hoặc</span>
+                                <div class="line"></div>
+                            </div>
+    
+                            <div class="auth-form__socials">
+                                <a href="" class="btn btn--link">
+                                    <i class="fab socials-icon fa-facebook"></i>
+                                    Facebook
+                                </a>
+                                <a href="" class="btn btn--link">
+                                    <i class="fab socials-icon fa-google"></i>
+                                    Google
+                                </a>
+                                <a href="" class="btn btn--link">
+                                    <i class="fab socials-icon fa-apple"></i>
+                                    Apple
+                                </a>
+                            </div>
+                            
+                           
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        <div class="model">
+            <div class="model-container">
+
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
