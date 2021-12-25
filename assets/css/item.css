@@ -1,0 +1,409 @@
+.breadcrumb {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.breadcrumb-name {
+    text-decoration: none;
+    font-size: 1.35rem;
+    color: var(--text-color);
+    font-weight: 400;
+    position: relative;
+}
+
+.breadcrumb-name::after {
+    content: ">";
+    position: absolute;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    right: -15px
+}
+
+.breadcrumb-name + .breadcrumb-name {
+    margin-left: 20px;
+}
+
+.breadcrumb-root {
+    color: blue;
+} 
+
+/* Body */
+
+.item-container {
+    padding: 15px;
+}
+
+.item-img-container {
+
+}
+
+.item-img {
+    width: 100%;
+}
+
+.item-name {
+    font-size: 2rem;
+}
+
+.item-rate {
+    margin: 10px 0;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.item_rate__rating {
+    position: relative;
+}
+
+.item_rate__rating + .item_rate__rating {
+    margin-left: 30px;
+}
+
+.item_rate__rating + .item_rate__rating::after {
+    position: absolute;
+    content: "";
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    height: 20px;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.item-rate__star-wrap {
+
+}
+
+.item-rated {
+    color: #FFCE3D;
+}
+    
+.item-rated-not {
+    color: #0000008A;
+}
+
+.item-info {
+
+}
+
+.item-price {
+    background-color: rgb(245,245,245);
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    padding: 20px;
+    display: inline-block;
+    min-width: 450px;
+}
+
+.item-price--sale {
+    font-size: 1.8rem;
+    color:#0000008A;
+    text-decoration: line-through;
+}
+
+.item-price-from {
+    margin-right: 10px;
+}
+
+.item-price-to {
+
+}
+
+.item-deliver {
+    margin: 20px 0;
+    display: flex;
+    color: var(--text-color);
+}
+
+.item_deliver-tag {
+    width: 85px;
+    font-size: 1.4rem;
+}
+
+.item-deliver-wrap {
+
+}
+
+.item-deliver-describ {
+    font-size: 1.3rem;
+}
+
+.item-deliver-describ-sub {
+    color: #0000008A;
+    font-size: 1.3rem;
+}
+
+.item-deliver-info {
+    margin-top: 10px;
+}
+
+.item-deliver-place {
+    font-size: 1.3rem;
+}
+
+.item-deliver-price {
+    font-size: 1.3rem;
+}
+
+.item-amount {
+    display: flex;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
+.item-amount-tag {
+    width: 85px;
+}
+
+.item-buying {
+    margin-top: 60px;
+    display: flex;
+}
+
+.item-toCart {
+    color: var(--primary-color);
+    background-color: #FFEEE8;
+    border: 1px solid var(--primary-color);
+}
+
+.item-toCart-icon {
+    margin-right: 10px;
+}
+
+.item-buyNow {
+
+}
+
+/* Shop */
+
+.shop-container {
+    margin-top: 15px;
+    display: flex;
+    padding: 15px;
+}
+
+.shop-info {
+    flex-basis: 40%;
+    display: flex;
+    position: relative;
+}
+
+.shop-info::after {
+    position: absolute;
+    content: "";
+    height: 70%;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.shop-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shop-avatar-link {
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.shop-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shop-name {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--text-color);
+    
+}
+
+.shop-status {
+    font-size: 1.4rem;
+    color: #0000008A;
+    margin-top: -10px;
+}
+
+.shop-btn-icon {
+    margin-right: 5px;
+}
+
+.shop-btn:first-child {
+    background: rgb(255,238,232);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.shop-btn:last-child {
+    background: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+}
+
+.shop-rating {
+    flex-basis: 60%;
+    margin: 0 80px 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shop-rating__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+}
+
+.shop-rating-title {
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.shop-rating-value {
+    margin-left: 7px;
+    color: var(--primary-color);
+}
+
+/* Item description */
+
+.item-description-container {
+    margin-top: 15px;
+    padding: 25px;
+}
+
+.item-description {
+
+}
+
+.item-description-title {
+    background: rgb(245,245,245);
+    padding: 14px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.item-description-wrap {
+    margin: 0 15px;
+    padding: 25px 0 0 0;
+}
+
+.item-description__item {
+    display: flex;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+.item-description__label {
+    width: 100px;
+    margin-right: 35px;
+    color: #0000008A;
+}
+
+.item-description__value {
+    color: var(--text-color);
+}
+
+.item-description-detail span{
+    white-space: pre-wrap;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    color: var(--text-color);
+}
+
+/* Shop feedback */
+.shop-feedback {
+    padding: 20px;
+    margin-top: 15px;
+    min-height: 450px;
+}
+
+.shop-feedback__title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin: 0 0 20px 0;
+}
+
+.shop-feedback-wrapper {
+
+}
+
+.shop-feedback-item {
+    display: flex;
+    padding: 15px 0;
+}
+
+.shop-feedback-item + .shop-feedback-item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shop-feedback-item__img-link i{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 2.2rem;
+    color: #0000008A;
+    background-color: rgb(245,245,245);
+    margin-right: 10px;
+}
+
+.shop-feedback-item__info-wrapper {
+    flex: 1;
+}
+
+.shop-feedback-item__name {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.shop-feedback-item__rating {
+    display: flex;
+    margin-top: 4px;
+}
+
+.shop-feedback-item__rating i {
+    margin-right: 4px;
+}
+
+.shop-feedback-item__comment {
+    margin-top: 15px;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.shop-feedback-item__imgs-wrapper {
+    display: flex;
+    margin: 15px 0 20px;
+}
+
+.imgs-wrapper__item {
+    width: 72px;
+    height: 72px;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.user-img {
+    background-image: url('https://news.hanoicomputer.vn/wp-content/uploads/2019/09/Intel-Core-i9-9900KS_2.jpg');
+}
+
+.imgs-wrapper__item + .imgs-wrapper__item {
+    margin-left: 10px;
+}
+
+.shop-feedback-item__time {
+    color: #0000008A;
+    font-size: 1.2rem;
+}
