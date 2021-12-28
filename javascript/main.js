@@ -59,49 +59,7 @@ for( const searchSelection of searchSelections ){
     })
 }
 
-<<<<<<< HEAD
 // Active Button
-=======
-// Amount
-
-function getParen(index) {
-    var td = index.parentElement.parentElement;
-    var tr = td.children;
-    return tr;
-}
-
-String.prototype.split2 = function(char) {
-    var temp = this.split(char);
-    var result = "";
-    for(var i = 0; i<temp.length; i++)
-        result += temp[i];
-    return result;
-}
-
-updateAmount();
-orderUpdate();
-updateAmountinCart();
-
-function amountControl(para, symbol) {
-    var parent = para.parentElement;
-    var child = parent.children;
-    var getParent = getParen(parent);
-    if(symbol === "+")
-    {
-        child[1].value++;
-    }
-    else {
-        if(child[1].value <= 1)
-            return false;
-        else
-            child[1].value--;    
-    }
-    var currentPrice = getParent[2].children[0].innerHTML.split2('.');
-    console.log(currentPrice);
-    getParent[4].children[0].innerHTML = (parseInt(currentPrice)*parseInt(child[1].value)).toLocaleString();
-    updateAmount();
-}
->>>>>>> e98cfa9115675eaa1ec409d271548b80627e9107
 
 function active(index) {
     if(index.classList.contains("btn--primary"))
@@ -139,7 +97,6 @@ function amountControl(index, symbol) {
 // Cart
 
 
-<<<<<<< HEAD
 // Check Valid form
 
 function registerValid() {
@@ -155,12 +112,6 @@ function validPhone() {
         getPhone.setCustomValidity("Số điện thoại không hợp lệ")
     else {
         getPhone.setCustomValidity("");
-=======
-function deleteItem_CartIndex(index) {
-    while(index.tagName != "LI")
-    {
-        index = index.parentElement;
->>>>>>> e98cfa9115675eaa1ec409d271548b80627e9107
     }
 }
 
@@ -254,7 +205,6 @@ function hideLoginNavbar(loginField) {
                         </li>
     `)
 }
-<<<<<<< HEAD
 
 String.prototype.split2 = function(char) {
     var temp = this.split(char);
@@ -263,5 +213,3 @@ String.prototype.split2 = function(char) {
         result += temp[i];
     return result;
 }
-=======
->>>>>>> e98cfa9115675eaa1ec409d271548b80627e9107

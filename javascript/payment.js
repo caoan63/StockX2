@@ -63,7 +63,7 @@ function uploadUserInfo() {
     var fieldForm = document.forms.inputForm;
     fieldForm.userNameOut.value = fieldForm.userNameInp.value;
     fieldForm.userPhoneOut.value = fieldForm.userPhoneInp.value;
-    fieldForm.userAddressOut.value = fieldForm.userAddressInp.value;
+    document.querySelector(".payment-info__item:nth-child(3) .payment-item__output").innerHTML = fieldForm.userAddressInp.value;
     fieldForm.userNoteOut.value = fieldForm.userNoteInp.value
 }
 

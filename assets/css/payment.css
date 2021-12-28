@@ -139,9 +139,9 @@ td:first-child {
 
 .payment-info__output {
     flex-basis: 40%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 2px;
-    padding: 20px;
+    padding: 10px;
     position: relative;
 }
 
@@ -160,13 +160,15 @@ td:first-child {
     flex-basis: 60%;
 }
 
+.payment-info__item:nth-child(3) label {
+    align-self: flex-start;
+}
+
 .payment-item__output {
     border: none;
-    margin-top: 20px;
-    padding: 5px;
-    width: 60%;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     outline: none;
+    flex: 1;
 }
 
 .payment-info__input label {
@@ -180,7 +182,14 @@ td:first-child {
 .payment-info__output label {
     font-size: 1.4rem;
     margin-right: 10px;
-    }
+    font-weight: 500;
+}
+
+.payment-info__item {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
 
 .payment-btn {
     margin-top: 30px;
