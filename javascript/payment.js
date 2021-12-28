@@ -6,6 +6,7 @@ window.addEventListener("load", function() {
     formData = formData.slice(1).split(/[&=]/g);
     updateIteminCart(formData);
     calculateTotal();
+    this.document.querySelector(".payment-total__btn").type = "button";
 })  
 
 function validInput() {
@@ -64,7 +65,8 @@ function uploadUserInfo() {
     fieldForm.userNameOut.value = fieldForm.userNameInp.value;
     fieldForm.userPhoneOut.value = fieldForm.userPhoneInp.value;
     document.querySelector(".payment-info__item:nth-child(3) .payment-item__output").innerHTML = fieldForm.userAddressInp.value;
-    fieldForm.userNoteOut.value = fieldForm.userNoteInp.value
+    fieldForm.userNoteOut.value = fieldForm.userNoteInp.value;
+    document.querySelector(".payment-total__btn").type = "submit";
 }
 
 function updateIteminCart(dataField) {

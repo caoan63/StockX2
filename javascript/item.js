@@ -15,10 +15,13 @@ function addtoCart() {
     `
                                     <li class="header__search-cart-item">
                                         <img src="${itemImg}" alt="" class="header__search-cart-item-img">
+                                        <input type="hidden" name="Cart_itemImg">
                                         <div class="header__search-cart-item-info">
                                             <div class="header__search-cart-item-head">
                                                 <h5 class="header__search-cart-item-name">${itemName}</h5>
+                                                <input type="hidden" name="Cart_itemName">
                                                 <span class="header__search-cart-item-price">${itemPrice}đ</span>
+                                                <input type="hidden" name="Cart_itemPrice">
                                             </div>
                                             <div class="header__search-cart-item-body">
                                                 <span class="header__search-cart-item-description">Phân loại: Bạc</span>
@@ -29,6 +32,7 @@ function addtoCart() {
     
     ` )
     updateAmountinCart();
+    uploadItem();
 }
 
 function updateInfo() {

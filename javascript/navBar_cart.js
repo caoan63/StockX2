@@ -1,5 +1,6 @@
 window.addEventListener("load", function() {
     updateAmountinCart();   
+    uploadItem();
 });
 
 function updateAmountinCart() {
@@ -30,5 +31,22 @@ function checkEmptyCart() {
                                                 <div class="empty-container">
                                                 <img src="./assets/img/cart/empty-cart.png" alt="" class="header__search-cart--none-img">
                                                 <span class="header__search-cart--none-msg">Chưa có sản phẩm nào</span></div>`);
+    }
+}
+
+function uploadItem() {
+    var form = document.forms.indexCartForm;
+    for(var index of form.elements.Cart_itemImg)
+    {
+        index.value = index.parentElement.children[0].src;
+    }
+    for(var index of form.elements.Cart_itemName)
+    {
+        index.value = index.parentElement.children[0].innerHTML.trim();
+        console.log(index.value)
+    }
+    for(var index of form.elements.Cart_itemPrice)
+    {
+        index.value = index.parentElement.children[2].innerHTML.trim();
     }
 }

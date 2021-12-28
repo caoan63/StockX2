@@ -199,3 +199,20 @@ td:nth-child(2) {
 .discount-btn {
     margin-left: 15px;
 }
+
+.empty-cartList {
+    height: 312px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-cartList img {
+    width: 200px;
+}
+
+.empty-cartList span {
+    margin-top: 5px;
+    font-size: 2rem;
+}
