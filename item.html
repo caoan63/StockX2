@@ -17,6 +17,7 @@
     <script src="https://kit.fontawesome.com/05a9bb444c.js" crossorigin="anonymous"></script>
     <script src="./javascript/main.js" defer></script>
     <script src="./javascript/navBar_cart.js" defer></script>
+    <script src="./javascript/item.js" defer></script>
     <title>Phi Đội Bay Official | Cung Cấp Linh Kiện  Máy Tính Cao Cấp</title>
 </head>
 <body>
@@ -202,11 +203,11 @@
                                 <h3 class="header__search-cart-title">Sản phẩm trong giỏ hàng</h3>
                                 <ul class="header__search-cart-list">
                                     <li class="header__search-cart-item">
-                                        <img src="./assets/img/product/tv1.jpg" alt="" class="header__search-cart-item-img">
+                                        <img src="https://product.hstatic.net/200000019918/product/i9-9900k-1_aa5acbf5b3cb4535acc5f015674df6ea_67d9fe235da84b5894332b50c781b9bc.jpg" alt="" class="header__search-cart-item-img">
                                         <div class="header__search-cart-item-info">
                                             <div class="header__search-cart-item-head">
-                                                <h5 class="header__search-cart-item-name">Tivi siêu mỏng và đẹp</h5>
-                                                <span class="header__search-cart-item-price">13.999.000đ</span>
+                                                <h5 class="header__search-cart-item-name">CPU Intel Core i9-12900K LGA 1700 Chính Hãng</h5>
+                                                <span class="header__search-cart-item-price">9.150.000đ</span>
                                             </div>
                                             <div class="header__search-cart-item-body">
                                                 <span class="header__search-cart-item-description">Phân loại: Bạc</span>
@@ -215,11 +216,12 @@
                                         </div>
                                     </li>
                                     <li class="header__search-cart-item">
-                                        <img src="./assets/img/product/tv1.jpg" alt="" class="header__search-cart-item-img">
+                                        <img src="https://anphat.com.vn/media/product/35604_gv_n306tgaming_oc_8gd_candb.png" alt="" class="header__search-cart-item-img">
                                         <div class="header__search-cart-item-info">
                                             <div class="header__search-cart-item-head">
-                                                <h5 class="header__search-cart-item-name">Tivi siêu mỏng và đẹp</h5>
-                                                <span class="header__search-cart-item-price">13.999.000đ</span>
+                                                <h5 class="header__search-cart-item-name">
+                                                    GIGABYTE AORUS RTX 3060 Ti MASTER 8GB (8GB GDDR6 256-bit HDMI + DP)</h5>
+                                                <span class="header__search-cart-item-price">18.950.000đ</span>
                                             </div>
                                             <div class="header__search-cart-item-body">
                                                 <span class="header__search-cart-item-description">Phân loại: Bạc</span>
@@ -228,11 +230,12 @@
                                         </div>
                                     </li>
                                     <li class="header__search-cart-item">
-                                        <img src="./assets/img/product/tv1.jpg" alt="" class="header__search-cart-item-img">
+                                        <img src="https://hanoicomputercdn.com/media/product/47009_corsair_vengeance_pro_rgb.jpg" alt="" class="header__search-cart-item-img">
                                         <div class="header__search-cart-item-info">
                                             <div class="header__search-cart-item-head">
-                                                <h5 class="header__search-cart-item-name">Tivi siêu mỏng và đẹp</h5>
-                                                <span class="header__search-cart-item-price">13.999.000đ</span>
+                                                <h5 class="header__search-cart-item-name">
+                                                    RAM Desktop CORSAIR Vengeance PRO RGB CMW32GX4M2D3000C16 3000MHz</h5>
+                                                <span class="header__search-cart-item-price">3.950.000đ</span>
                                             </div>
                                             <div class="header__search-cart-item-body">
                                                 <span class="header__search-cart-item-description">Phân loại: Bạc</span>
@@ -277,81 +280,89 @@
                 </div>
 
                 <div class="item-container background-white-blur">
+                    <form action="./payment.html" method="get" name="itemForm">
                     <div class="row">
-                        <div class="col l-4">
-                            <div class="item-img-container">
-                                <img src="https://product.hstatic.net/200000019918/product/i9-9900k-1_aa5acbf5b3cb4535acc5f015674df6ea_67d9fe235da84b5894332b50c781b9bc.jpg" class="item-img" alt="">
-                            </div>
-                        </div>
-    
-                        <div class="col l-8">
-                            <div class="item-name">
-                                CPU Intel Core i9-12900K LGA 1700 Chính Hãng
-                            </div>
-                            <div class="item-rate">
-                                <span class="item_rate__rating item_rate__rating-star">
-                                    4.8
-                                    <span class="item_rate__star-wrap">
-                                        <i class="item-rated fas fa-star"></i>
-                                        <i class="item-rated fas fa-star"></i>
-                                        <i class="item-rated fas fa-star"></i>
-                                        <i class="item-rated fas fa-star"></i>
-                                        <i class="item-rated-not fas fa-star"></i>
-                                    </span>
-                                </span>
-                                <span class="item_rate__rating item_rate__rating-comments">
-                                    20 Đánh giá
-                                </span>
-                                <span class="item_rate__rating item_rate__rating-sold ">
-                                    42 Đã bán
-                                </span>
-                            </div>
-                            <div class="item-info">
-                                <div class="item-price">
-                                    <span class="item-price-from item-price--sale">13.150.000đ</span>
-                                    <span class="item-price-to">9.150.000đ</span>
+                            <div class="col l-4">
+                                <div class="item-img-container">
+                                    <img src="https://product.hstatic.net/200000019918/product/i9-9900k-1_aa5acbf5b3cb4535acc5f015674df6ea_67d9fe235da84b5894332b50c781b9bc.jpg" class="item-img" alt="">
+                                    <input type="hidden" name="itemImg" value="">
                                 </div>
-                                <div class="item-deliver">
-                                    <div class="item_deliver-tag">
-                                        Vận chuyển
+                            </div>
+        
+                            <div class="col l-8">
+                                <div class="item-name">
+                                    CPU Intel Core i9-12900K LGA 1700 Chính Hãng
+                                </div>
+                                <input type="hidden" name="itemName" value="">
+                                <div class="item-rate">
+                                    <span class="item_rate__rating item_rate__rating-star">
+                                        4.8
+                                        <span class="item_rate__star-wrap">
+                                            <i class="item-rated fas fa-star"></i>
+                                            <i class="item-rated fas fa-star"></i>
+                                            <i class="item-rated fas fa-star"></i>
+                                            <i class="item-rated fas fa-star"></i>
+                                            <i class="item-rated-not fas fa-star"></i>
+                                        </span>
+                                    </span>
+                                    <span class="item_rate__rating item_rate__rating-comments">
+                                        20 Đánh giá
+                                    </span>
+                                    <span class="item_rate__rating item_rate__rating-sold ">
+                                        42 Đã bán
+                                    </span>
+                                </div>
+                                <div class="item-info">
+                                    <div class="item-price">
+                                        <span class="item-price-from item-price--sale">13.150.000đ</span>
+                                        <span class="item-price-to">9.150.000đ
+                                        </span>
+                                        <input type="hidden" name="itemPrice" value="">
                                     </div>
-                                    <div class="item-delive-wrap">
-                                        <div class="item-deliver-describ">
-                                            Miễn phí vận chuyển
-                                            <div class="item-deliver-describ-sub">
-                                                Miễn phí vận chuyển cho đơn hàng trên ₫300.000
+                                    <div class="item-deliver">
+                                        <div class="item_deliver-tag">
+                                            Vận chuyển
+                                        </div>
+                                        <div class="item-delive-wrap">
+                                            <div class="item-deliver-describ">
+                                                Miễn phí vận chuyển
+                                                <div class="item-deliver-describ-sub">
+                                                    Miễn phí vận chuyển cho đơn hàng trên ₫300.000
+                                                </div>
+                                            </div>
+                                            <div class="item-deliver-info">
+                                                <div class="item-deliver-place">
+                                                    Vận Chuyển Tới
+                                                </div>
+                                                <div class="item-deliver-price">
+                                                    Phí vận chuyển
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="item-deliver-info">
-                                            <div class="item-deliver-place">
-                                                Vận Chuyển Tới
-                                            </div>
-                                            <div class="item-deliver-price">
-                                                Phí vận chuyển
-                                            </div>
+                                    </div>
+                                    <div class="item-amount">
+                                        <div class="item-amount-tag">
+                                            Số lượng
+                                        </div>
+                                        <span class="amount-control">
+                                            <button type="button" onclick="amountControl(this,'-')" class="amount-control-btn amount-control__down">-</button>
+                                            <input type="number" name="quantity" id="amount-control__value" class="amount-control__input" value="1">
+                                            <button type="button" onclick="amountControl(this,'+')" class="amount-control-btn amount-control__up">+</button>
+                                        </span>
+                                        <div class="item-amount-left">
+                                            12 sản phẩm có sẵn
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item-amount">
-                                    <div class="item-amount-tag">
-                                        Số lượng
-                                    </div>
-                                    <span class="amount-control">
-                                        <button onclick="amountControl(this,'-')" class="amount-control-btn amount-control__down">-</button>
-                                        <input type="number" name="quantity" id="amount-control__value" class="amount-control__input" value="1">
-                                        <button onclick="amountControl(this,'+')" class="amount-control-btn amount-control__up">+</button>
-                                    </span>
-                                    <div class="item-amount-left">
-                                        12 sản phẩm có sẵn
+                                    <div class="item-buying">
+                                        <button type="button" class="item-toCart btn">
+                                            <i class="item-toCart-icon fas fa-shopping-cart"></i>
+                                            Thêm vào giỏ hàng</button>
+                                        <button class="item-buyNow btn btn--primary">Mua ngay</button>
+                                            <input type="hidden" name="method" value="only">
                                     </div>
                                 </div>
-                                <div class="item-buying">
-                                    <button class="item-toCart btn">
-                                        <i class="item-toCart-icon fas fa-shopping-cart"></i>
-                                        Thêm vào giỏ hàng</button>
-                                    <button class="item-buyNow btn btn--primary">Mua ngay</button>
-                                </div>
-                            </div>
+                            </form>
+                            
                         </div>
                     </div>
                     

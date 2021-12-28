@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <script src="https://kit.fontawesome.com/05a9bb444c.js" crossorigin="anonymous"></script>
     <script src="./javascript/main.js" defer></script>
-    <script src="./javascript/cartList.js" defer></script>
     <script src="./javascript/payment.js" defer></script>
     <title>Phi Đội Bay Official | Cung Cấp Linh Kiện  Máy Tính Cao Cấp</title>
 </head>
@@ -200,8 +199,10 @@
                             <button onclick="validInput()" class="btn btn--primary payment-btn">Xác nhận</button>
                         </form>
                     </div>
+                    
                     <div class="payment-item"> <!-- Item info-->
-                        <table>
+                        <form action="" id="paymentForm" name="paymentForm" method="post">
+                        <table id="payment-table">
                             <tr>
                                 <th>
                                     <span class="table-heading__title">Sản phẩm</span>
@@ -216,7 +217,7 @@
                                     <span class="table-heading__title">Số tiền</span>
                                 </th>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     <img src="./assets/img/product/tv1.jpg" alt="" class="table-row__item-img">
                                     <div>
@@ -232,7 +233,7 @@
                                 <td>
                                     <span class="table-heading__title total-price money-type">13.999.000</span>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </table>
                         <div class="payment-total__payment">
                             <div class="payment_total__info">
@@ -243,6 +244,7 @@
                             </div>
                             <button class="btn btn--primary payment-total__btn">Đặt hàng</button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>

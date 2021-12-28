@@ -7,7 +7,6 @@ function updateAmountinCart() {
     function amountInCart() {
             return document.querySelectorAll(".header__search-cart-item").length;
     }
-
     amountOfItem.innerHTML = amountInCart();
 }
 

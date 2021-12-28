@@ -1,23 +1,13 @@
 "use strict";
 
-
-
 window.addEventListener("load", function() {
     updateItem();
 })
 
 function updateItem() {
     orderUpdate();
-    updateAmount();
     updatePrice();
-}
-
-String.prototype.split2 = function(char) {
-    var temp = this.split(char);
-    var result = "";
-    for(var i = 0; i<temp.length; i++)
-        result += temp[i];
-    return result;
+    updateAmount();
 }
 
 // Amount control
@@ -43,7 +33,26 @@ function updatePrice() {
         var price = parseInt(key.innerHTML.split2("."));
         var amount = getChildList[3].children[0].children[1].value;
         var totalPriceEle = key.parentElement.parentElement.children[4].children[0];
+        var totalPriceEleInput = key.parentElement.parentElement.children[4].children[1];
+        var currentPricevalue = key.parentElement.children[1];
+        currentPricevalue.value = parseInt(price).toLocaleString();
         totalPriceEle.innerHTML = parseInt(price*amount).toLocaleString();
+        totalPriceEleInput.value = parseInt(price*amount).toLocaleString();
+        updateInfo();
+    }
+}
+
+function updateInfo() {
+    var form = document.forms.orderForm;
+    for(var index of form.elements.itemName)
+    {
+        var name = index.parentElement.children[0].innerHTML;
+        index.value = name;
+    }
+    for(var index of form.elements.itemImg)
+    {
+        var img = index.parentElement.parentElement.children[0].src;
+        index.value = img;
     }
 }
 
@@ -56,13 +65,14 @@ function deleteItem(index) {
 
 function updateAmount() {
     var amountList = document.getElementsByName("quantity");
-    var priceList = document.querySelectorAll(".total-price");
+    var priceList = document.getElementsByName("itemPrice_Aft");
+    console.log(priceList)
     var amount = 0;
     var price = 0;
     for(var index of amountList)
         amount += Number(index.value);
     for(var index of priceList)
-        price += parseInt(index.innerHTML.split2('.'));
+        price += parseInt(index.value.split2("."));
     document.getElementById("totalAmount").innerHTML = amount;
     document.getElementById("totalPrice").innerHTML = price.toLocaleString();
 }

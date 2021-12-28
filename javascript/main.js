@@ -205,3 +205,11 @@ function hideLoginNavbar(loginField) {
                         </li>
     `)
 }
+
+String.prototype.split2 = function(char) {
+    var temp = this.split(char);
+    var result = "";
+    for(var i = 0; i<temp.length; i++)
+        result += temp[i];
+    return result;
+}
