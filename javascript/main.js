@@ -1,5 +1,10 @@
 "use strict"
 
+window.addEventListener("load", function() {
+    this.document.getElementById("register-btn").onclick = registerValid;
+    this.document.getElementById("login-btn").onclick = loginValid;
+})
+
 // Login Modal
 
 const modals = document.querySelectorAll('.modal');
@@ -54,43 +59,7 @@ for( const searchSelection of searchSelections ){
     })
 }
 
-// Amount
-
-function getParen(index) {
-    var td = index.parentElement.parentElement;
-    var tr = td.children;
-    return tr;
-}
-
-String.prototype.split2 = function(char) {
-    var temp = this.split(char);
-    var result = "";
-    for(var i = 0; i<temp.length; i++)
-        result += temp[i];
-    return result;
-}
-
-updateAmount();
-
-function amountControl(para, symbol) {
-    var parent = para.parentElement;
-    var child = parent.children;
-    var getParent = getParen(parent);
-    if(symbol === "+")
-    {
-        child[1].value++;
-    }
-    else {
-        if(child[1].value <= 1)
-            return false;
-        else
-            child[1].value--;    
-    }
-    var currentPrice = getParent[2].children[0].innerHTML.split2('.');
-    console.log(currentPrice);
-    getParent[4].children[0].innerHTML = (parseInt(currentPrice)*parseInt(child[1].value)).toLocaleString();
-    updateAmount();
-}
+// Active Button
 
 function active(index) {
     if(index.classList.contains("btn--primary"))
@@ -99,107 +68,140 @@ function active(index) {
         index.classList.add("btn--primary")
 }
 
-function activeList(index) {
+function activeList(index) { // active filter list
     if(index.classList.contains("selection--checked"))
         index.classList.remove("selection--checked")
     else
         index.classList.add("selection--checked")
 }
 
-function likeButton(index) {
-    const liked = "fas fa-heart";
-    const unliked = "far fa-heart";
-    if(index.classList.console(unliked))
+// Amount control
+
+function getLeftItem(index) {
+    var itemLeft = index.innerHTML.trim().slice(0,2);
+    return parseInt(itemLeft);
+}
+
+function amountControl(index, symbol) {
+    var indexChild = index.parentElement.children[1];
+    if(symbol === "+" && indexChild.value < getLeftItem(index.parentElement.parentElement.children[2]))
     {
-        this.classList.remove(unliked);
-        this.classList.add(liked);
+        indexChild.value++;
     }
-    else
+    if(symbol === "-" && indexChild.value > 1)
     {
-        this.classList.remove(like);
-        this.classList.add(unliked);
+        indexChild.value--;
     }
 }
 
-function updateAmountinCart() {
-    var amountOfItem = document.querySelector(".header__search-cart-number");
-    function amountInCart() {
-            return document.querySelectorAll(".header__search-cart-item").length;
-    }
+// Cart
 
-    amountOfItem.innerHTML = amountInCart();
+
+// Check Valid form
+
+function registerValid() {
+    validPhone();
+    validEmail();
 }
 
-updateAmountinCart();
+function validPhone() {
+    var getPhone = document.forms.register.elements.fphone;
+    if(getPhone.validity.valueMissing) {
+        getPhone.setCustomValidity("Số điện thoại không được bỏ trống");
+    } else if(isNaN(getPhone.value) || getPhone.value.length <= 9 || getPhone.value.length > 12) 
+        getPhone.setCustomValidity("Số điện thoại không hợp lệ")
+    else {
+        getPhone.setCustomValidity("");
+    }
+}
 
-function deleteItem_CartIndex(index) {
-    while(index.tagName != "LI")
+function validEmail() {
+    var getEmail = document.forms.register.elements.fmail;
+    if(getEmail.validity.valueMissing) {
+        getEmail.setCustomValidity("Địa chỉ email không được bỏ trống");
+    } else if(getEmail.value.indexOf("@") < 0 || getEmail.value.indexOf("@") == getEmail.value.length -1) {
+        getEmail.setCustomValidity("Địa chỉ email không hợp lệ");
+    } else {
+        getEmail.setCustomValidity("");
+    }
+}
+
+function loginValid() {
+    validUserName();
+    validPassword();
+}
+
+function ValidateEmail(mail) 
+{
+    console.log(mail);
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
     {
-        index = index.parentElement;
+        return (true);
     }
-    index.remove();
-    checkEmptyCart();
-    updateAmountinCart();
+    return (false);
 }
 
-function checkEmptyCart() {
-    var target = document.querySelector(".header__search-cart-list");
-    
-    if(target.children.length == 0)
+function validUserName() {
+    var getUserName = document.forms.login.elements.fusername;
+    if(getUserName.validity.valueMissing) {
+        getUserName.setCustomValidity("Tên đăng nhập không được bỏ trống");
+    } else if(getUserName.value.indexOf("@") > 0 && ValidateEmail(getUserName.value) == false) {
+        getUserName.setCustomValidity("Địa chỉ email không hợp lệ");
+    } else if(getUserName.value.length <= 6) {
+        getUserName.setCustomValidity("Tên đăng nhập không hợp lệ");
+    } else {
+        getUserName.setCustomValidity("");
+    }
+}
+
+function validPassword() {
+    var getPassword = document.forms.login.elements.fpassword;
+    if(getPassword.validity.valueMissing) {
+        getPassword.setCustomValidity("Mật khẩu không được bỏ trống");
+    } else if(getPassword.value.length <= 6) {
+        getPassword.setCustomValidity("Mật khẩu phải nhiều hơn 6 ký tự");
+    } else {
+        getPassword.setCustomValidity("");
+    }
+}
+
+function loginInfo(index) {
+    var userName = index.slice(1).split(/&/g);
+    return userName[0].slice(userName[0].indexOf("=") + 1);
+}
+
+function hideLoginNavbar(loginField) {
+    var loginNav = document.querySelectorAll(".login-navBar");
+    var headerNavbar_list = document.querySelectorAll(".header__navbar-list");
+    for(var key of loginNav)
     {
-        target.insertAdjacentHTML("afterbegin",
-                                                `
-                                                <div class="empty-container">
-                                                <img src="./assets/img/cart/empty-cart.png" alt="" class="header__search-cart--none-img">
-                                                <span class="header__search-cart--none-msg">Chưa có sản phẩm nào</span></div>`);
+        key.remove();
     }
+
+   
+    headerNavbar_list[1].insertAdjacentHTML("beforeend",`
+                        <li class="header__navbar-item">
+                            <div class="header__navbar-item-user">
+                                <img src="./assets/img/profile/avatar.jpg" alt="" class="header__navbar-item-user-img">
+                                <span class="header__navbar-item-user-name">
+                                    ${loginInfo(loginField)}
+                                </span>
+
+                                <ul class="header__navbar-user-menu">
+                                    <li class="header__user-item">
+                                        <a href="" class="header__user-item-link">Tài Khoản Của Tôi</a>
+                                    </li>
+                                    <li class="header__user-item">
+                                        <a href="" class="header__user-item-link">Đơn Mua</a>
+                                    </li>
+                                    <li class="header__user-item">
+                                        <a href="" class="header__user-item-link">Lịch Sử</a>
+                                    </li>
+                                    <li class="header__user-item">
+                                        <a href="" class="header__user-item-link logout-btn">Đăng Xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+    `)
 }
-
-// Delete item in cart
-
-function deleteItem(index) {
-    var target = index.parentElement.parentElement;
-    target.remove();
-    updateAmount();
-    orderUpdate();
-}
-
-// Calculate total Price
-
-// Checkbox
-
-function checkAll(key) {
-    var checkedLists = document.querySelectorAll('.checkBox');
-    for(var index of checkedLists)
-    {
-        if(key.checked == true)
-            index.checked = true;
-        else
-            index.checked = false;
-    }
-    updateAmount();
-}
-
-function updateAmount() {
-    var amountList = document.getElementsByName("quantity");
-    var priceList = document.querySelectorAll(".total-price");
-    var amount = 0;
-    var price = 0;
-    for(var index of amountList)
-        amount += Number(index.value);
-    for(var index of priceList)
-        price += parseInt(index.innerHTML.split2('.'));
-    document.getElementById("totalAmount").innerHTML = amount;
-    document.getElementById("totalPrice").innerHTML = price.toLocaleString();
-}
-
-function orderUpdate() {
-    var orderItem = document.querySelectorAll(".table-row__item-order");
-    var start = 1;
-    for(var index of orderItem)
-    {
-        index.innerHTML = start++;
-    }
-}
-
-orderUpdate();

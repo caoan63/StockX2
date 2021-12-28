@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <script src="https://kit.fontawesome.com/05a9bb444c.js" crossorigin="anonymous"></script>
     <script src="./javascript/main.js" defer></script>
+    <script src="./javascript/navBar_cart.js" defer></script>
     <title>Phi Đội Bay Official | Cung Cấp Linh Kiện  Máy Tính Cao Cấp</title>
 </head>
 <body>
@@ -341,7 +342,7 @@
                                         <button onclick="amountControl(this,'+')" class="amount-control-btn amount-control__up">+</button>
                                     </span>
                                     <div class="item-amount-left">
-                                        78 sản phẩm có sẵn
+                                        12 sản phẩm có sẵn
                                     </div>
                                 </div>
                                 <div class="item-buying">
@@ -679,12 +680,12 @@ Nhân đồ họa tích hợp: Intel® UHD Graphics 750</span>
                                 <span class="auth-form__switch-btn">Đăng nhập</span>
                             </div>
     
-                            <form class="auth-form__form">
+                            <form id="register-form" name="register" class="auth-form__form">
                                 <input type="tel" name="fphone" class="auth-form__input" placeholder="Số điện thoại" required>
                                 <input type="email" name="fmail" class="auth-form__input" placeholder="Email" required>
                                 <div class="auth-form__controls">
                                     <button class="auth-form__btn btn auth-form__btn-return" type="button">Trở lại</button>
-                                    <button class="auth-form__btn btn btn--primary" type="submit">Đăng ký</button>
+                                    <button class="auth-form__btn btn btn--primary" id="register-btn" type="submit">Đăng ký</button>
                                 </div>
                             </form>
     
@@ -734,12 +735,12 @@ Nhân đồ họa tích hợp: Intel® UHD Graphics 750</span>
                                 <span class="auth-form__switch-btn">Đăng ký</span>
                             </div>
     
-                            <form class="auth-form__form">
-                                <input type="tel" name="fphone" class="auth-form__input" placeholder="Số điện thoại" required>
-                                <input type="email" name="fmail" class="auth-form__input" placeholder="Email" required>
+                            <form id="login-form" name="login" class="auth-form__form">
+                                <input type="text" name="fusername" class="auth-form__input" placeholder="Số điện thoại/Email/Tên tài khoản" required>
+                                <input type="password" name="fpassword" class="auth-form__input" placeholder="Mật khẩu" required>
                                 <div class="auth-form__controls">
                                     <button class="auth-form__btn btn auth-form__btn-return" type="button">Trở lại</button>
-                                    <button class="auth-form__btn btn btn--primary" type="submit">Đăng ký</button>
+                                    <button id="login-btn" class="auth-form__btn btn btn--primary" type="submit">Đăng nhập</button>
                                 </div>
                             </form>
     

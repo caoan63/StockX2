@@ -140,6 +140,10 @@
     color: #00BFA5;
 }
 
+.header__user-item:last-child:hover .header__user-item-link {
+    color: rgb(255,22,23);
+}
+
 .header__user-item-link {
     font-size: 1.4rem;
     font-weight: 400;

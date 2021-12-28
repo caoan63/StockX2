@@ -1,0 +1,235 @@
+.cart-header {
+    background: var(--primary-color);
+    position: relative;
+}
+
+.primary-background {
+    
+}
+
+.payment__header {
+    position: absolute; 
+    width: 100%;
+    height: var(--cartList-header);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 5 5px rgba(0, 0, 0, 0.1);  
+    background: var(--white-color);
+    display: flex;
+    align-items: center;
+}
+
+.payment__header-link {
+    font-size: 2.6rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.payment__header-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.payment__header-icon {
+    margin-left: 10px;
+}
+
+.payment__header-title::after {
+    position: absolute;
+    content: "";
+    border-left: 2px solid currentColor;
+    height: 30px;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#payment-body {
+    margin-top: var(--cartList-header);
+    padding: 10px 0;
+}
+
+table, tr {
+
+}
+
+th {
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+th:first-child {
+    text-align: left;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+td {
+    font-size: 1.5rem;
+}
+
+table {
+    height: 40px;
+    width: 100%;
+    background: var(--white-color);
+    border-radius: 2px;
+}
+
+td:first-child,
+th:first-child {
+    width: 55%;
+}
+
+td {
+    text-align: center;
+}
+
+td:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.table-row__item-img {
+    width: 80px;
+    margin: 10px 10px 10px 0;
+}
+
+.table-row__item-name {
+    width: 320px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-align: left;
+}
+
+.payment-item {
+    background: var(--white-color);
+    padding: 20px;
+}
+
+.payment-item + .payment-item {
+    margin-top: 10px;
+}
+
+.payment-item__title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.payment-item__input {
+    margin-top: 15px;
+    width: 70%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    outline: none;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.payment-item__info-container {
+    display: flex;
+    align-items: center;
+}
+
+.payment-info__output {
+    flex-basis: 40%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 20px;
+    position: relative;
+}
+
+.payment-info__output::before {
+    content: "Thông tin";
+    position: absolute;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.payment-info__input {
+    flex-basis: 60%;
+}
+
+.payment-item__output {
+    border: none;
+    margin-top: 20px;
+    padding: 5px;
+    width: 60%;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.payment-info__input label {
+    text-align: right;
+    font-size: 1.4rem;
+    display: inline-block;
+    width: 90px;
+    margin-right: 10px;
+}
+
+.payment-info__output label {
+    font-size: 1.4rem;
+    margin-right: 10px;
+    }
+
+.payment-btn {
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 80px;
+}
+
+.payment-total__payment {
+    margin-top: 20px;
+    position: relative;
+    font-size: 1.5rem;
+    padding: 0 20px;
+    text-align: right;
+}
+
+.payment-total__payment::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    top: -15px;
+}
+
+.payment_total__info::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    bottom: -15px;
+}
+
+.payment_total__info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+}
+
+.payment-total__item {
+    margin: 10px 0;
+}
+
+.payment-total__item span{
+    display: inline-block;
+    width: 130px;
+}
+
+.payment-total__btn {
+    margin-top: 35px;
+}

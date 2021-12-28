@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <script src="https://kit.fontawesome.com/05a9bb444c.js" crossorigin="anonymous"></script>  
     <script src="./javascript/main.js" defer></script>
+    <script src="./javascript/navBar_cart.js" defer></script>
     <title>Phi Đội Bay Official | Cung Cấp Linh Kiện  Máy Tính Cao Cấp</title>
 </head>
 <body>
@@ -103,37 +104,13 @@
                             Hỗ trợ</li>
 
                         <!-- Login status -->
-                        <li class="header__navbar-item js-header__navbar-item signup-btn header__navbar-item--seperate">
+                        <li class="header__navbar-item js-header__navbar-item signup-btn header__navbar-item--seperate login-navBar">
                             <a href="#" class="header__navbar-item-link ">Đăng ký</a>
                         </li>
 
-                        <li class="header__navbar-item signin-btn js-header__navbar-item">
+                        <li class="header__navbar-item signin-btn js-header__navbar-item login-navBar">
                             <a href="#" class="header__navbar-item-link">Đăng nhập</a>
-                        </li>
-
-                        <!-- <li class="header__navbar-item">
-                            <div class="header__navbar-item-user">
-                                <img src="./assets/img/profile/avatar.jpg" alt="" class="header__navbar-item-user-img">
-                                <span class="header__navbar-item-user-name">
-                                    Cao Quốc Ân
-                                </span>
-
-                                <ul class="header__navbar-user-menu">
-                                    <li class="header__user-item">
-                                        <a href="" class="header__user-item-link">Tài Khoản Của Tôi</a>
-                                    </li>
-                                    <li class="header__user-item">
-                                        <a href="" class="header__user-item-link">Đơn Mua</a>
-                                    </li>
-                                    <li class="header__user-item">
-                                        <a href="" class="header__user-item-link">Lịch Sử</a>
-                                    </li>
-                                    <li class="header__user-item header__user-item--last">
-                                        <a href="" class="header__user-item-link">Đăng Xuất</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li> -->
+                        </li> 
                     </ul>
                 </nav>
 
@@ -1580,12 +1557,12 @@
                                 <span class="auth-form__switch-btn">Đăng nhập</span>
                             </div>
     
-                            <form class="auth-form__form">
+                            <form id="register-form" name="register" class="auth-form__form">
                                 <input type="tel" name="fphone" class="auth-form__input" placeholder="Số điện thoại" required>
                                 <input type="email" name="fmail" class="auth-form__input" placeholder="Email" required>
                                 <div class="auth-form__controls">
                                     <button class="auth-form__btn btn auth-form__btn-return" type="button">Trở lại</button>
-                                    <button class="auth-form__btn btn btn--primary" type="submit">Đăng ký</button>
+                                    <button class="auth-form__btn btn btn--primary" id="register-btn" type="submit">Đăng ký</button>
                                 </div>
                             </form>
                             
@@ -1635,12 +1612,12 @@
                                 <span class="auth-form__switch-btn">Đăng ký</span>
                             </div>
     
-                            <form class="auth-form__form">
+                            <form id="login-form" name="login" class="auth-form__form">
                                 <input type="text" name="fusername" class="auth-form__input" placeholder="Số điện thoại/Email/Tên tài khoản" required>
                                 <input type="password" name="fpassword" class="auth-form__input" placeholder="Mật khẩu" required>
                                 <div class="auth-form__controls">
                                     <button class="auth-form__btn btn auth-form__btn-return" type="button">Trở lại</button>
-                                    <button class="auth-form__btn btn btn--primary" type="submit">Đăng nhập</button>
+                                    <button id="login-btn" class="auth-form__btn btn btn--primary" type="submit">Đăng nhập</button>
                                 </div>
                             </form>
     

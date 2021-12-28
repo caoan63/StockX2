@@ -177,7 +177,7 @@ td:nth-child(2) {
     position: absolute;
     content: "đ";
     top: -13%;
-    right: -12%;
+    right: -10px;    
     font-size: 1.3rem;
 }
 
