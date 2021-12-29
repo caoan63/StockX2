@@ -1722,3 +1722,15 @@ i.item__product-item-action_like--fill {
     color: #0000008A;
     font-size: 1.3rem;
 }
+
+.money-type {
+    position: relative;
+}
+
+.money-type::after {
+    position: absolute;
+    content: "đ";
+    top: -13%;
+    right: -10px;    
+    font-size: 1.3rem;
+}

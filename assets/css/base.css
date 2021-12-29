@@ -188,10 +188,6 @@ html {
     cursor: pointer;
 }
 
-.amount-control__down {
-
-}
-
 .amount-control__input {
     outline: none; 
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -210,9 +206,8 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-
-.amount-control__up {
-
+.primary-color {
+    color: var(--primary-color);
 }
 
 .item-amount-left {
