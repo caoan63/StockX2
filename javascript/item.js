@@ -11,6 +11,7 @@ function addtoCart() {
     var itemImg = document.querySelector(".item-img").src;
     var cartList = document.querySelector(".header__search-cart-list");
 
+    checkEmpty();
     cartList.insertAdjacentHTML("beforeend",
     `
                                     <li class="header__search-cart-item">
@@ -35,6 +36,13 @@ function addtoCart() {
     uploadItem();
 }
 
+
+function checkEmpty() {
+    var cart = document.querySelector(".header__search-cart-list");
+    if(cart.children[0].tagName === 'DIV')
+        document.querySelector(".empty-container").remove();
+}
+
 function updateInfo() {
     var form = document.forms.itemForm;
     form.elements.itemImg.value = document.querySelector(".item-img").src;
@@ -42,4 +50,3 @@ function updateInfo() {
     form.elements.itemPrice.value = document.querySelector(".item-price-to").innerHTML.trim();
     console.log(form.elements.quantity.value)
 }
-                                    

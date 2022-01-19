@@ -23,7 +23,7 @@ function validUserName() {
     if(userName.validity.valueMissing) {
         userName.setCustomValidity("Họ và tên không được để trống")
         return false;
-    } else if(hasNumber(userName.value)) {
+    } else if(hasNumber(userName.value || userName.value.length < 6)) {
         userName.setCustomValidity("Họ và tên không hợp lệ")
         return false;
     } else {
@@ -51,7 +51,7 @@ function validAddress() {
     if(getAddress.validity.valueMissing) {
         getAddress.setCustomValidity("Địa chỉ không được bỏ trống");
         return false;
-    } else if(getAddress.value.length <= 10 || !isNaN(getAddress.value)) {
+    } else if(getAddress.value.length < 10 || !isNaN(getAddress.value)) {
         getAddress.setCustomValidity("Địa chỉ không hợp lệ");
         return false;
     } else {
